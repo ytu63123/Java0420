@@ -15,7 +15,7 @@ public class Subway {
         food = new Lettuce(food);
         food = new Lettuce(food);
         
-        System.out.println(food.getName());
-        System.out.println(food.getPrice());
+        System.out.println("您點的餐點有:"+food.getName());
+        System.out.println("總額:"+food.getPrice()+"元");
     }
 }
