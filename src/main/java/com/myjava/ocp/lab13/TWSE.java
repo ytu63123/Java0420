@@ -11,7 +11,7 @@ public class TWSE {
         String pathtring = "src\\main\\java\\com\\myjava\\ocp\\lab13\\BWIBBU_d.csv";
         File file = new File(pathtring);
         String csvstring = new Scanner(file).useDelimiter("\\A").next();
-        //System.out.println(csvstring);
+        System.out.println(csvstring);
         List<Stock> list = new ArrayList<>();
         String[] rows = csvstring.split("\n");
         for(String row : rows) {
@@ -31,11 +31,11 @@ public class TWSE {
             }
         }
         //System.out.println(list);
-        list.stream()
-                .filter(stock -> !stock.本益比.equals("-") && Double.parseDouble(stock.本益比) < 10)
-                .filter(stock -> !stock.殖利率.equals("-") && Double.parseDouble(stock.殖利率) > 7)
-                .filter(stock -> !stock.股價淨值比.equals("-") && Double.parseDouble(stock.股價淨值比) < 1)
-                .forEach(System.out::println);
+//        list.stream()
+//                .filter(stock -> !stock.本益比.equals("-") && Double.parseDouble(stock.本益比) < 10)
+//                .filter(stock -> !stock.殖利率.equals("-") && Double.parseDouble(stock.殖利率) > 7)
+//                .filter(stock -> !stock.股價淨值比.equals("-") && Double.parseDouble(stock.股價淨值比) < 1)
+//                .forEach(System.out::println);
                 
         
     }
